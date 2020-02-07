@@ -18,4 +18,4 @@ sudo dtc -I dts -O dtb -o /boot/overlays/touchscreen.dtbo touchscreen.dts
 ```
 
 ### Boot Configuration
-I also have included a *config.txt* that should replace the existing one in the Raspian */boot/* folder. The purpose of the file configuration file is to tell Raspbian to load the device tree overlays we compiled. Additionally, the configuration file has the settings (resolution, timings, etc...) for the LCD display.
+I also have included a *config.txt* that should replace the existing one in the Raspbian */boot/* folder. The purpose of the file configuration file is to tell Raspbian to load the device tree overlays we compiled. Additionally, the configuration file has the settings (resolution, timings, etc...) for the LCD display.
