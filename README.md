@@ -10,11 +10,12 @@ I have written some device tree settings that need to be compiled into device tr
 2. *pullup.dts* - This sets the pullup resistors for the GPIO pins that we are using for I2C. We are using I2C to communicate with the touch screen controller.
 3. *touchscreen.dts* - This sets the driver to use with the I2C touch controller. It also registers a GPIO pin to use as a hardware interrupt for the touch controller.
 The device tree overlays should be compiled with the following commands:
-'''
+
+```
 sudo dtc -I dts -O dtb -o /boot/overlays/dpi565.dtbo dpi565.dts
 sudo dtc -I dts -O dtb -o /boot/overlays/pullup.dtbo pullup.dts
 sudo dtc -I dts -O dtb -o /boot/overlays/touchscreen.dtbo touchscreen.dts
-'''
+```
 
 ### Boot Configuration
 I also have included a *config.txt* that should replace the existing one in the Raspian */boot/* folder. The purpose of the file configuration file is to tell Raspbian to load the device tree overlays we compiled. Additionally, the configuration file has the settings (resolution, timings, etc...) for the LCD display.
