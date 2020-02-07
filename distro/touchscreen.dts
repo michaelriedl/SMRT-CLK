@@ -1,0 +1,46 @@
+// Definitions for FocalTech System Touchcontroller by I2C bus.
+/dts-v1/;
+/plugin/;
+
+/{
+        compatible = "brcm,bcm2835", "brcm,bcm2708", "brcm,bcm2709";
+
+        fragment@0 {
+                target = <&i2c_gpio>;
+                __overlay__ {
+                        status = "okay";
+                };
+        };
+
+        fragment@1 {
+                target = <&gpio>;
+                __overlay__ {
+                        ts_pins: ts_pins {
+                                brcm,pins = <23>; /* GPIO */
+                                brcm,function = <0>; /* in */
+                                brcm,pull = <2>; /* up */
+                        };
+                };
+        };
+
+        fragment@2 {
+                target = <&i2c_gpio>;
+                __overlay__ {
+                        #address-cells = <1>;
+                        #size-cells = <0>;
+
+                        edt_ft5x06: edt_ft5x06@38 {
+                                compatible = "edt,edt-ft5406", "edt,edt-ft5x06";
+                                reg = <0x38>;
+                                pinctrl-names = "default";
+                                pinctrl-0 = <&ts_pins>;
+                                interrupt-parent = <&gpio>;
+                                interrupts = <23 0x8>;
+                        };
+                };
+        };
+
+        __overrides__ {
+                addr = <&edt_ft5x06>, "reg:0";
+        };
+};
