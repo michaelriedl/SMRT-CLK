@@ -1,4 +1,7 @@
 # SMRT-CLK
+<p align="center">
+<img src="/pics/smrt_clk.jpg" alt="BatBone" width="400">
+</p>
 Smart clock / dashboard based on the Raspberry Pi. 
 
 ## Setting Up the SMRT CLK
