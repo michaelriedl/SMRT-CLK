@@ -1,8 +1,17 @@
-# SMRT-CLK
 <p align="center">
-<img src="/pics/smrt_clk.jpg" alt="BatBone" width="400">
+  <img src="/pics/smrt_clk.jpg" alt="BatBone" width="400">
 </p>
+
+# SMRT-CLK
 Smart clock / dashboard based on the Raspberry Pi. 
+
+## Building the SMRT CLK
+This section will cover the materials and steps needed to build the SMRT CLK.
+
+### Order the PCB
+The first step is to order the PCB. You can use the schematics to order the board from your favorite PCB manufacturer or you can use the link below to order it from OSH Park. 
+
+<a href="https://oshpark.com/shared_projects/3NsGFRa8"><img src="https://oshpark.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png" alt="Order from OSH Park"></img></a>
 
 ## Setting Up the SMRT CLK
 There are just a few files that need to be copied to the Pi itself and then some of them need to be compiled. These files are located in the */distro/* folder. We will start first with the device tree overlays which need to be transfered to the Pi and compiled.
