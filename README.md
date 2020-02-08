@@ -10,6 +10,7 @@ This section will cover the materials and steps needed to build the SMRT CLK.
 
 ### Order the PCB
 The first step is to order the PCB. You can use the schematics to order the board from your favorite PCB manufacturer or you can use the link below to order it from OSH Park. 
+
 <a href="https://oshpark.com/shared_projects/3NsGFRa8"><img src="https://oshpark.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png" alt="Order from OSH Park"></img></a>
 
 ## Setting Up the SMRT CLK
