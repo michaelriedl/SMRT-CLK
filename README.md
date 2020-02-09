@@ -13,6 +13,18 @@ The first step is to order the PCB. You can use the schematics to order the boar
 
 <a href="https://oshpark.com/shared_projects/3NsGFRa8"><img src="https://oshpark.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png" alt="Order from OSH Park"></img></a>
 
+### Order the Parts
+Next you'll need to order the parts using the bill of materials spreadsheet in the */bom/* folder. You can upload the BOM straight to DigiKey and order the parts all at once. You will also need to order some parts from McMaster Carr. The links to the parts are as follows:
++ <https://www.mcmaster.com/94180A331>
++ <https://www.mcmaster.com/94180A307>
++ <https://www.mcmaster.com/93070A064>
++ <https://www.mcmaster.com/93070a275>
+
+### Assembling the PCB
+Assembing the PCB is easiest using solder paste and a hot air reflow station. You can refer to the board schematic for component placement. The most difficult component is the 40 pin connector for the screen due to the fine pitch of the pins.
+
+### Building the Case
+
 ## Setting Up the SMRT CLK
 There are just a few files that need to be copied to the Pi itself and then some of them need to be compiled. These files are located in the */distro/* folder. We will start first with the device tree overlays which need to be transfered to the Pi and compiled.
 
