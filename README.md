@@ -21,9 +21,19 @@ Next you'll need to order the parts using the bill of materials spreadsheet in t
 + <https://www.mcmaster.com/93070a275>
 
 ### Assembling the PCB
-Assembing the PCB is easiest using solder paste and a hot air reflow station. You can refer to the board schematic for component placement. The most difficult component is the 40 pin connector for the screen due to the fine pitch of the pins.
+Assembing the PCB is easiest using solder paste and a hot air reflow station. You can refer to the board schematic for component placement. The most difficult component is the 40 pin connector for the screen due to the fine pitch of the pins. Once the PCB is assembled you will need to solder the PCB to the Raspberry Pi Zero. I found that this was easiest to do by first using the screws and brass inserts to hold the PCB to the Pi once the pads are aligned and then using the solder paste syringe to put the paste into the through-hole pins on the Pi. The two can then be reflowed with a hot air reflow station.
 
 ### Building the Case
+To build the case you will need to 3D print two parts and cut another two parts out of 3mm acrylic. I have included STL files for the parts that need to be printed and an EPS file for the parts that need to be cut. If you do not have access to a laser cutter, I have used <https://ponoko.com> in the past and was really happy with the results.
+
+Once the parts are 3D printed, you will need to sink the brass heated inserts into the parts with a soldering iron. This should be pretty straight forward. There are plenty of videos and guides on the interenet if you need an example of how to set the inserts.
+
+Final assembly of the SMRT CLK should be easy. I would suggest assembling the SMRT CLK in this order:
+1. Attach the screen's ribbon cables to the PCB.
+2. Secure the Pi into the 3D printed base using the screws.
+3. Attach the acrylic lid to the 3D printed base using the screws.
+4. Attach the acrylic screen mount to the base using the screws.
+5. Place the screen in the 3D printed screen mount and attach it to the acrylic screen mount with the screws.
 
 ## Setting Up the SMRT CLK
 There are just a few files that need to be copied to the Pi itself and then some of them need to be compiled. These files are located in the */distro/* folder. We will start first with the device tree overlays which need to be transfered to the Pi and compiled.
